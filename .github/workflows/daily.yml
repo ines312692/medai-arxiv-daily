@@ -2,7 +2,7 @@ name: Daily arXiv digest
 
 on:
   schedule:
-    - cron: "23 6 * * *"   # every day 06:23 UTC (after arXiv's daily announcement)
+    - cron: "23 5 * * *"   # démarre à 05:23 UTC, puis attente aléatoire 0–3 h
   workflow_dispatch:
 
 permissions:
@@ -11,22 +11,50 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 240
     steps:
+      - name: Random delay (only for the daily schedule)
+        if: github.event_name == 'schedule'
+        run: |
+          D=$(( RANDOM % 10800 ))
+          echo "Waiting $((D/60)) minutes"
+          sleep $D
+
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Fetch papers and build digests
         run: python scripts/update.py
-      - name: Commit and push
+
+      - name: Commit (one commit per part) and push
         run: |
           git config user.name  "ines312692"
           git config user.email "147738702+ines312692@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "Nothing new today."
-            exit 0
+          TODAY=$(date -u +%F)
+
+          if [ -f data/papers.json ]; then
+            git add data/papers.json
+            if ! git diff --cached --quiet; then
+              N=$(python -c "import json;print(len(json.load(open('data/papers.json'))))")
+              git commit -m "data: update papers ($N tracked)"
+            fi
           fi
-          N=$(python -c "import json;print(len(json.load(open('data/papers.json'))))")
-          git commit -m "digest: $(date -u +%F) — $N papers tracked"
-          git push
+
+          if [ -d digests ]; then
+            git add digests/20* 2>/dev/null || true
+            git diff --cached --quiet || git commit -m "digest: $TODAY"
+
+            git add digests/weekly 2>/dev/null || true
+            git diff --cached --quiet || git commit -m "weekly: recap $(date -u +%G-W%V)"
+          fi
+
+          git add -A
+          git diff --cached --quiet || git commit -m "docs: refresh README ($TODAY)"
+
+          if [ -n "$(git log origin/main..HEAD --oneline)" ]; then
+            git push
+          else
+            echo "Nothing new today."
+          fi
