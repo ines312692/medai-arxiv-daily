@@ -1,0 +1,13 @@
+{
+  "max_results": 200,
+  "categories": ["eess.IV", "cs.CV", "cs.CL", "cs.LG", "cs.AI"],
+  "medical_terms": ["medical", "clinical", "radiology", "MRI", "histopathology", "patient", "healthcare", "biomedical"],
+  "topics": {
+    "Segmentation": ["segmentation", "segment", "u-net", "unet", "nnu-net"],
+    "Radiology (CT / MRI / X-ray)": ["radiology", "ct", "computed tomography", "mri", "magnetic resonance", "x-ray", "chest", "mammography", "ultrasound"],
+    "Digital pathology": ["histopathology", "pathology", "whole slide", "wsi", "h&e"],
+    "Clinical LLMs & NLP": ["large language model", "llm", "llms", "language model", "clinical notes", "report generation", "question answering", "nlp"],
+    "Foundation & vision-language models": ["foundation model", "vision-language", "clip", "multimodal"],
+    "Fairness, bias & robustness": ["fairness", "bias", "robustness", "shortcut", "out-of-distribution", "domain shift", "uncertainty"]
+  }
+}
