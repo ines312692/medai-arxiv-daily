@@ -2,7 +2,7 @@
 
 Automated daily digest of new arXiv papers on **AI for medicine**: medical image segmentation, radiology, digital pathology, clinical LLMs and fairness. Updated every day by GitHub Actions.
 
-![papers](https://img.shields.io/badge/papers_tracked-200-blue) ![updated](https://img.shields.io/badge/updated-2026--11--21-green)
+![papers](https://img.shields.io/badge/papers_tracked-200-blue) ![updated](https://img.shields.io/badge/updated-2026--11--22-green)
 
 ## Last 30 days by topic
 
