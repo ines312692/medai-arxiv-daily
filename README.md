@@ -2,51 +2,51 @@
 
 Automated daily digest of new arXiv papers on **AI for medicine**: medical image segmentation, radiology, digital pathology, clinical LLMs and fairness. Updated every day by GitHub Actions.
 
-![papers](https://img.shields.io/badge/papers_tracked-200-blue) ![updated](https://img.shields.io/badge/updated-2026--11--22-green)
+![papers](https://img.shields.io/badge/papers_tracked-234-blue) ![updated](https://img.shields.io/badge/updated-2026--11--23-green)
 
 ## Last 30 days by topic
 
 | Topic | Papers |
 |---|---|
-| Segmentation | 27 |
-| Radiology (CT / MRI / X-ray) | 61 |
-| Digital pathology | 14 |
-| Clinical LLMs & NLP | 55 |
-| Foundation & vision-language models | 39 |
-| Fairness, bias & robustness | 36 |
-| Other | 50 |
+| Segmentation | 31 |
+| Radiology (CT / MRI / X-ray) | 67 |
+| Digital pathology | 18 |
+| Clinical LLMs & NLP | 62 |
+| Foundation & vision-language models | 49 |
+| Fairness, bias & robustness | 40 |
+| Other | 62 |
 
-## Latest papers (2026-11-21)
+## Latest papers (2026-11-23)
 
 | Paper | Topics |
 |---|---|
-| [VoxForge: A Unified Foundation Model for Dense 3D Features Across MRI, CT and PET](https://arxiv.org/abs/2611.25309)<br><sub>Rushil Anirudh, Jayaraman J. Thiagarajan</sub> | Segmentation, Radiology (CT / MRI / X-ray), Foundation & vision-language models |
-| [Bilateral Evidence Selection and Reasoning for Mammography Vision--Language Models](https://arxiv.org/abs/2611.25418)<br><sub>Zhengbo Zhou, Dooman Arefan, Shandong Wu</sub> | Radiology (CT / MRI / X-ray) |
-| [From Sequence Uncertainty to Phenotype Hypotheses: Uncertainty-Conditioned Inference over Biomedical Knowledge Graphs](https://arxiv.org/abs/2611.25422)<br><sub>Huixin Zhan, Jason H. Moore</sub> | Fairness, bias & robustness |
-| [PAIR-MED: Policy-reward Alternation for Iterative Refinement in Multilingual Medical Reasoning](https://arxiv.org/abs/2611.25446)<br><sub>Fan Gao, Xiaohang Xu, Lang Huang et al.</sub> | Other |
-| [Inverse ECG Reconstruction via a Preconditioned Variational Quantum Linear Solver](https://arxiv.org/abs/2611.25450)<br><sub>Xizhuo Zhang, Chao Lu, Bing Yao</sub> | Other |
-| [Uncertainty-Aware Multimodal Deep Learning for Prediction of Radiation-Induced Xerostomia in Head and Neck Cancer](https://arxiv.org/abs/2611.25481)<br><sub>Jin Yang, Tian Liu, Jose Penagaricano et al.</sub> | Radiology (CT / MRI / X-ray), Foundation & vision-language models, Fairness, bias & robustness |
-| [LBW-NPS: A Local Band-Weighted Noise Power Spectrum Loss for Texture-Preserving Low-Dose CT Denoising](https://arxiv.org/abs/2611.25548)<br><sub>Fatma Elif Yalçındağ, Mehmet Ozan Ünal, Metin Ertaş et al.</sub> | Segmentation, Radiology (CT / MRI / X-ray) |
-| [An Explainable and Scalable Hierarchical Tensor Framework for Integrating Multi-Omics and Digital Pathomics](https://arxiv.org/abs/2611.25584)<br><sub>Ahmad Hussein, Ali Anaissi, Mukesh Prasad et al.</sub> | Digital pathology |
-| [QUBO-based feature selection for MRI undersampling pattern design](https://arxiv.org/abs/2611.25625)<br><sub>Xiaoxin Huang, Masayuki Ohzeki</sub> | Radiology (CT / MRI / X-ray) |
-| [Erasing the Wrong Thing: Conditional Attribute Leakage and Concept Erasure in Shared Foundation-Model Embeddings](https://arxiv.org/abs/2611.25640)<br><sub>Haijun He, Fei Li, Donghong Ji et al.</sub> | Radiology (CT / MRI / X-ray) |
-| [Explainability of genotype embedding models through observed cohort paths](https://arxiv.org/abs/2611.25681)<br><sub>Amashi Niwarthana, Aloysius Tan, Jagath C. Rajapakse</sub> | Other |
-| [Disentangling Monitor Hardware Artifacts and Smoothing Lag for Shift-Robust Intraoperative EEG and Hemodynamic Risk Calibration](https://arxiv.org/abs/2611.25765)<br><sub>Zeyu Jia</sub> | Fairness, bias & robustness |
-| [Harnessing Medical Visual-Language Models with Agentic Evidence Management](https://arxiv.org/abs/2611.25840)<br><sub>Qiming Huang, Hanze Dong, Jipeng Zhang et al.</sub> | Segmentation, Foundation & vision-language models |
-| [Verifiable Logic in Medical LLMs: A Critical Review of Agentic Clinical Reasoning Optimization and Neuro-Symbolic Grounding](https://arxiv.org/abs/2611.25898)<br><sub>Youssef ElNahas, Adel Ammar, Soumaya Chaffar et al.</sub> | Clinical LLMs & NLP |
-| [Physics-Informed Deep Learning for Shear Wave Speed Estimation in MR Elastography](https://arxiv.org/abs/2611.26111)<br><sub>Stefan Martin, Jakob Schattenfroh, Patrick Schuenke et al.</sub> | Radiology (CT / MRI / X-ray) |
-| [A Statistical Framework for Training Data Auditing of Large Language Models](https://arxiv.org/abs/2611.26264)<br><sub>Shengjie Niu, Yeheng Ge, Jian Huang</sub> | Clinical LLMs & NLP |
-| [C-LiTE: A Lightweight Foundation Model for Cellular feature learning in Histopathology](https://arxiv.org/abs/2611.26316)<br><sub>Esha Sadia Nasir, Jiaqi Lv, Gozde N. Gunesli et al.</sub> | Digital pathology, Foundation & vision-language models |
-| [DeepQuest: From Knowledge Gaps to Scientific Discovery in Alzheimer's Disease](https://arxiv.org/abs/2611.26343)<br><sub>Chunbo Jiang, Yifei Chen, Beining Wu et al.</sub> | Other |
-| [TRCF: Temporal-Reference Complementary Forecasting for Irregular Multivariate Time Series](https://arxiv.org/abs/2611.26351)<br><sub>Xudong Zuo, Shusen Ma, Qirui Chen et al.</sub> | Other |
-| [Contactless Estimation of Respiratory Frequency Using 3D-CNN on Thermal Images](https://arxiv.org/abs/2611.26367)<br><sub>Federica Gioia, Filippo Pura, Alberto Greco et al.</sub> | Other |
-| [SEEC: A Large-Scale Dataset and Benchmark for Self-Supervised External-Eye Representation Learning](https://arxiv.org/abs/2611.26386)<br><sub>George R. Nahass, Michelle Fleishaker, Sanjay Ganesh et al.</sub> | Fairness, bias & robustness |
-| [Learning to Defer under Expert Drift](https://arxiv.org/abs/2611.26440)<br><sub>Ziyao Mou, Andrea Wynn, Eric Nalisnick</sub> | Radiology (CT / MRI / X-ray) |
-| [Bayesian optimization on amortized search space](https://arxiv.org/abs/2611.26459)<br><sub>Tristan Fauvel, Federico Pavone, Titouan Guillou et al.</sub> | Fairness, bias & robustness |
-| [Multimodal Error Detection in Chest X-ray Reports: A Large Language Model Reading Image Evidence](https://arxiv.org/abs/2611.26492)<br><sub>Yanda Cheng, Bo Wen, Yuhao Lu</sub> | Radiology (CT / MRI / X-ray), Clinical LLMs & NLP, Foundation & vision-language models |
-| [Multi-institutional grading of Barrett's esophagus dysplasia without stain normalization using a pathology foundation model and multiple instance learning](https://arxiv.org/abs/2611.26562)<br><sub>Amirali Khosravi, Jaidip M. Jagtap, D. Chamil Codipilly et al.</sub> | Digital pathology, Foundation & vision-language models |
+| [Communication-Efficient Federated Learning of Latent Patient Representations from Multi-Institutional EHRs](https://arxiv.org/abs/2611.27900)<br><sub>Zhiyu Yan, Shiao Liu, Rahul Mahajan et al.</sub> | Other |
+| [TEA-Bench-BR: Can Coding Agents Turn a Branching Clinical Specification into Correct Code?](https://arxiv.org/abs/2611.27895)<br><sub>Marcio Andre de Souza Estevam</sub> | Other |
+| [Interpretable Tissue Architecture Complements Pathology Foundation Models](https://arxiv.org/abs/2611.27881)<br><sub>Zeeshan Shahid, Hammam M. AlGhamdi</sub> | Digital pathology |
+| [LesionAgent: Training-Free Agentic Tumor Tracking and Response Assessment in Longitudinal CT](https://arxiv.org/abs/2611.27876)<br><sub>Maximilian Rokuss, Jeya Maria Jose Valanarasu, Alejandro Lozano et al.</sub> | Segmentation, Radiology (CT / MRI / X-ray), Clinical LLMs & NLP |
+| [SLP-Bench: Evaluating and Improving Acoustic Claims of Reasoning Audio Language Models on Clinical Speech](https://arxiv.org/abs/2611.27810)<br><sub>Côme Hosxe, Rachid Riad, Quentin Spinat</sub> | Other |
+| [Feasibility of Multifrequency Neural Network-Based Wave Inversion in Ultrasound Time-Harmonic Elastography](https://arxiv.org/abs/2611.27792)<br><sub>Héloïse Bustin, Tom Meyer, Paul Spiesecke et al.</sub> | Radiology (CT / MRI / X-ray), Fairness, bias & robustness |
+| [A Benchmark Protocol and Fairness Analysis Towards Open-Set EEG Seizure Type Classification](https://arxiv.org/abs/2611.27783)<br><sub>Targol Bakhtiarvand, Terrance E. Boult, Jugal Kalita et al.</sub> | Foundation & vision-language models, Fairness, bias & robustness |
+| [Leakage-Free Is Not Confounder-Free: What a Patient-Level Split Cannot Certify About a Medical Imaging Benchmark](https://arxiv.org/abs/2611.27585)<br><sub>Ignazio Gallo, Mattia Gatti, Leonardo Sgroi et al.</sub> | Digital pathology |
+| [EchoAlign: Echocardiography foundation model with multilevel report alignment](https://arxiv.org/abs/2611.27517)<br><sub>Ahmed Aly, Darya Taratynova, Lotfi Abdelkrim Mecharbat et al.</sub> | Foundation & vision-language models |
+| [Breaking the Barrier of Hard Samples: A Data-Centric Approach to Synthetic Data for Medical Tasks](https://arxiv.org/abs/2611.27511)<br><sub>Maynara Donato de Souza, Cleber Zanchettin</sub> | Other |
+| [PathOPEN: A pathologist-curated histopathology dataset for visual question answering](https://arxiv.org/abs/2611.27469)<br><sub>Awais Naeem, Zhongling Xu, George Huang et al.</sub> | Digital pathology, Clinical LLMs & NLP, Foundation & vision-language models |
+| [Neurodegenerative Differential Diagnosis with Knowledge-enhanced Structural Reasoning](https://arxiv.org/abs/2611.27427)<br><sub>Mingxuan Wang, Siyuan Du, Yanfeng Wang et al.</sub> | Foundation & vision-language models |
+| [TrojanMaxxing: One-shotting VLM Backdoors with Weight-Space Programming](https://arxiv.org/abs/2611.27425)<br><sub>Ahaan Dabholkar, Harshvardhan Patel, Michalis Polychronakis et al.</sub> | Clinical LLMs & NLP, Foundation & vision-language models |
+| [Evidence sufficiency assessment enables cost-effective review allocation in on-premise clinical AI agents](https://arxiv.org/abs/2611.27390)<br><sub>Yiwen Qiu, Che Sun, Shu Shen et al.</sub> | Other |
+| [Observed, Curated, Reused: Observation Bias in Clinical AI Evaluation](https://arxiv.org/abs/2611.27301)<br><sub>Md Shamim Ahmed, Lukas Galke Poech, Richard Röttger</sub> | Fairness, bias & robustness |
+| [DermKG: A Concept-Centric Knowledge Graph for Interpretable Skin Disease Diagnosis from Dermatological Morphology](https://arxiv.org/abs/2611.27283)<br><sub>Cheng Huang, Yanmei Li, Mao Lin</sub> | Other |
+| [LingSante-Pulse: Unified Physiological Pretraining through Random-Feature Prediction and Cross-Modal Alignment](https://arxiv.org/abs/2611.27206)<br><sub>Linxiao Yang, Wenwei Wang, Tian Zhou et al.</sub> | Foundation & vision-language models |
+| [GEG-SAM: Gaze Exploration-Guided Segment Anything Model for Weakly Supervised Polyp Segmentation](https://arxiv.org/abs/2611.27183)<br><sub>Ao Wang, Lei Zhang, Lituan Wang et al.</sub> | Segmentation |
+| [How Does SAM-3 Adapt? Capacity, Update Geometry, and Domain Transfer](https://arxiv.org/abs/2611.27142)<br><sub>Allan Kazakov, Abdurrahman Javat, Duygu Cakir</sub> | Segmentation |
+| [Federated and Balanced $k$-means: Communication Efficiency, Privacy, and Heterogeneity](https://arxiv.org/abs/2611.27114)<br><sub>Feiteng Nie, Shengkun Zhu, Sheng Wang et al.</sub> | Other |
+| [EgoSurgHands: An Egocentric 3D Hand Pose Dataset & Benchmark for Open Surgery Training](https://arxiv.org/abs/2611.27101)<br><sub>Ankit Pal, Guillaume Kugener, Sofia Volpi et al.</sub> | Other |
+| [Learning 3D MRI Representations with Generative Adversarial Networks](https://arxiv.org/abs/2611.27057)<br><sub>Sujeet Lahane, Sapna Mishra, Akash Suryavanshi et al.</sub> | Radiology (CT / MRI / X-ray) |
+| [Towards Text-Mask Consistency in Medical Image Segmentation](https://arxiv.org/abs/2611.27050)<br><sub>Jie Gui, Hang Tu, Wen Sha et al.</sub> | Segmentation, Foundation & vision-language models |
+| [Toward a digital twin of the ICU patient: Forecasting and treatment response in a generative event model](https://arxiv.org/abs/2611.27028)<br><sub>Zhuoyang Lyu, Yiming Li, Peter C. Hou et al.</sub> | Other |
+| [Scalable Evaluation of Medical AI using Evidence-based Practice Recommendations](https://arxiv.org/abs/2611.27007)<br><sub>Teya Bergamaschi, Bijal Rajput, Akshay Goel et al.</sub> | Other |
 
-➡️ [All 200 papers of the day](digests/2026/11/2026-11-21.md)
+➡️ [All 34 papers of the day](digests/2026/11/2026-11-23.md)
 
 ## Archive
 
