@@ -4003,5 +4003,677 @@
    "Foundation & vision-language models"
   ],
   "added": "2026-11-21"
+ },
+ "2611.26794": {
+  "id": "2611.26794",
+  "title": "Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF",
+  "authors": [
+   "Yixuan Duan",
+   "Kexin Geng",
+   "Hanwen Xu",
+   "Wei Qiu"
+  ],
+  "summary": "Readouts of the tumor immune microenvironment (TIME), such as CD8+ T-cell density, intra-epithelial infiltration and the Ki67 index, combine tissue architecture from H&E with cell phenotypes from multiplex immunofluorescence (mIF). Multimodal large language models (MLLMs) could automate these readouts with an explanation, but two gaps remain. Pathology MLLMs read H&E alone, while these readouts need the cell phenotypes that mIF measures. And their reasoning has no step-level truth to be checked against, so R1-style reinforcement learning rewards only the final answer and leaves the reasoning unverified. Same-section H&E and mIF provide what both gaps lack: mIF measures every cell without manual annotation, which gives cell-level ground truth for each step that clinical guidelines prescribe, from delineating a tissue compartment to counting and normalizing the marker-positive cells within it. We therefore present HERMES (H&E-mIF Reasoning with Multimodal Evidence Supervision), an R1-style MLLM that reasons jointly over paired H&E and mIF in guideline steps and is trained with a process reward that checks every stated quantity against this truth. Across four field-level TIME tasks in colorectal cancer, HERMES (4B) reaches an average accuracy of 84.5%, compared with 74.7% for the strongest of twelve proprietary, general, medical and pathology MLLMs, and a higher share of its intermediate quantities is correct than for the strongest open-weight baseline. Without the process reward, reinforcement learning barely improves on supervised fine-tuning (80.0% vs. 78.8%) and fewer stated quantities are correct; editing a decisive stated quantity changes the answer as implied in all 885 test questions. Without retraining, it keeps the highest average accuracy on an external cohort imaged with CODEX (76.4% vs. 67.3%) and on head and neck cancer, a cancer type absent from training (76.7% vs. 72.5%).",
+  "published": "2026-11-19",
+  "category": "cs.AI",
+  "url": "https://arxiv.org/abs/2611.26794",
+  "tags": [
+   "Digital pathology",
+   "Foundation & vision-language models"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.26806": {
+  "id": "2611.26806",
+  "title": "MedicalRSI: Medical Recursive Self-Improving Agents via Clinical Model-Harness Co-Evolution",
+  "authors": [
+   "Ziqing Wang",
+   "Hamid Palangi",
+   "Lili Zhao",
+   "Kaize Ding"
+  ],
+  "summary": "Medical agents built on large language models (LLMs) have advanced rapidly, yet most stay fixed once deployed and do not keep using their experience to improve later attempts. As a result, the same kind of error can recur across patients. To address this, existing self-improvement methods update an agent's weights or its medical harness from its own experience, but their improving strategy stays fixed and never learns which changes actually help, which caps how much the agent can improve. Recursive self-improvement (RSI) instead improves both the agent and its improving strategy. However, achieving RSI for medical agents is challenging, because clinical workflows rarely come with a reference harness, and a change that fixes early errors may not fix the problems the agent meets later. We propose MedicalRSI, an RSI framework built on Clinical Model-Harness Co-Evolution, in which one model plays two roles. The Solver is the medical agent itself, and the Improver is its learnable improving strategy, which writes a medical harness from the agent's failures. Each harness is rewarded by its gain over acting without it, and both roles are trained together, so the Improver keeps adapting to the problems the Solver has not yet solved. On multiple benchmarks and LLM backbones, MedicalRSI outperforms existing context-level and weight-level self-improvement methods and transfers well to unseen workflows, new LLMs and new databases, a step toward medical agents that keep improving.",
+  "published": "2026-11-19",
+  "category": "cs.CL",
+  "url": "https://arxiv.org/abs/2611.26806",
+  "tags": [
+   "Clinical LLMs & NLP"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.26865": {
+  "id": "2611.26865",
+  "title": "FlowScope: 3D Scene Flow Pretraining Improves Surgical Robot Policies",
+  "authors": [
+   "John J. Han",
+   "Adam Schmidt",
+   "Jingpei Lu",
+   "Zooey He",
+   "Muhammad Abdullah Jamal",
+   "Jie Ying Wu",
+   "Omid Mohareri"
+  ],
+  "summary": "Imitation learning for surgical robots is limited by the cost of collecting demonstrations. Meanwhile, many robot-assisted procedures are recorded as stereo video, yet policies cannot learn from them directly; clinical video carries no action labels. We present FlowScope, which pretrains a surgical policy network on unlabeled clinical video by forecasting scene flow, the metric 3D motion of scene points, with labels computed by off-the-shelf stereo depth and optical flow models. We pretrain the trunk of an Action Chunking Transformer (ACT) on a dataset of 1,149 clinical procedures (1.35M clips) and discard the flow head afterward, so the deployed policy is a standard ACT with no added inference cost. On a real surgical robotic system, FlowScope raises needle pickup success from 54% to 90% and first-handover success on needle regrasp from 4% to 52% (full task: 2% to 14%) over training from scratch (n=50 trials each), and retains its gains with a generative flow-matching action head. Ablations indicate that metric 3D motion is the strongest pretraining signal among those tested; kinematics, 2D tracks, depth alone, and scale-free 3D flow, each paired with kinematics, yield smaller or no gains. Representation analyses suggest that scene-flow pretraining encodes metric needle depth more accurately, that kinematics pretraining increases reliance on the robot state, and that needle-depth probes follow the ordering of real-robot success where offline validation error does not.",
+  "published": "2026-11-19",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.26865",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.26867": {
+  "id": "2611.26867",
+  "title": "SonoAtlasWorld: Anatomy-Grounded Ultrasound World Models for Wide-Range Scanning",
+  "authors": [
+   "Zheyuan Zhang",
+   "Boris Mailhe",
+   "Hang Yu",
+   "Yikang Liu",
+   "Xiao Chen",
+   "Ankush Mukherjee",
+   "Terrence Chen",
+   "Shanhui Sun"
+  ],
+  "summary": "Learning robotic ultrasound policies requires interactive environments for scalable data generation and repeatable evaluation, while exploration on real patients is limited by acquisition costs and safety constraints. Generative world models offer an alternative, but image history and probe actions alone do not ensure anatomical consistency across wide-range scans and changing acoustic windows. We introduce SonoAtlasWorld, an ultrasound world model built on anatomy as state. A persistent 3D anatomical asset extracted from computed tomography (CT) anchors each scan to a specific anatomy. Probe actions determine anatomical and acoustic visibility conditions for a causal ultrasound generator trained on clinical videos. Our three-stage pipeline combines anatomy-conditioned pretraining, causal conversion and long-rollout alignment. Inference optimizations achieve pose-to-ultrasound throughput of 81.2 FPS. To evaluate anatomical control beyond image similarity, we introduce the Action-Following Index (AFI), which measures normalized reconstruction gain over a static-prefix baseline. On 40 held-out 3D volumes, SonoAtlasWorld achieves liver and macro-organ AFI of 0.428 and 0.262, compared with at most 0.117 and 0.038 for the tested action- and geometry-conditioned methods. Long-rollout alignment reduces brightness drift by 3.46x at the end of 40 repeated scan cycles. SonoAtlasWorld also generates offline policy-training demonstrations and supports anatomically grounded closed-loop evaluation. Scaling the generated training data improves key-plane acquisition success from 48.2% to 81.2% on unseen anatomies in simulation, demonstrating its utility for robotic ultrasound policy learning.",
+  "published": "2026-11-19",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.26867",
+  "tags": [
+   "Radiology (CT / MRI / X-ray)"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.26907": {
+  "id": "2611.26907",
+  "title": "A High-Compression Transformer VAE for Efficient and Controllable 3D Medical Image Generation with Diffusion Transformers",
+  "authors": [
+   "Bo Liu",
+   "Bingliang Zhang",
+   "Yubo Wang",
+   "Yunxiang Li",
+   "Yang Yang",
+   "Janine M. Lupo",
+   "Hui Lin"
+  ],
+  "summary": "Many medical image processing tasks, such as completing missing regions or correcting acquisition artifacts, can be cast as volumetric generation conditioned on observations of the same patient. Diffusion Transformers offer scalable capacity and flexible conditioning for this setting, but they operate on a learned image representation that must preserve fine anatomical and pathological detail while keeping complete three-dimensional volumes tractable. We bring Transformer variational autoencoding and multimodal diffusion together to address this challenge. Trained on BrainTumor-256K, a 249M Transformer VAE encodes and decodes $256^3$ volumes 7.6x faster than a comparably sized CNN trained on the same collection. Their PSNR difference is near zero with training-sized crop inputs, but the Transformer leads by 0.749 dB with full-volume inputs and an unchanged scoring region. Increasing Transformer capacity to 499M improves PSNR across all four brain MRI evaluation sets while retaining 3.8x lower encoding-decoding latency than the CNN. Fast encoding also allows conditions to be constructed dynamically in image space during latent diffusion training. Within the compressed representation, a shared Diffusion Transformer integrates text and spatial references for volumetric synthesis, completion and restoration. The brain-trained autoencoder further transfers to non-brain MRI and CT without target-domain fine-tuning, extending its use beyond the anatomy and modality on which it was learned. The framework provides a reusable representation and conditioning interface for efficient, controllable medical image generation. Code is available at https://github.com/OncoMMAI/brainmri-vit-vae3d.",
+  "published": "2026-11-19",
+  "category": "eess.IV",
+  "url": "https://arxiv.org/abs/2611.26907",
+  "tags": [
+   "Radiology (CT / MRI / X-ray)",
+   "Foundation & vision-language models"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.26913": {
+  "id": "2611.26913",
+  "title": "Surface Cues Over Structure: Probing LLM Behavior on Brain Connectivity Graphs",
+  "authors": [
+   "Prapti Roy",
+   "Khaled Mohammed Saifuddin"
+  ],
+  "summary": "Resting-state functional magnetic resonance imaging (rs-fMRI) provides a noninvasive view of functional interactions across the brain, which can be represented as connectivity graphs for neurological disease analysis. Large language models (LLMs) are increasingly being paired with such representations, yet it remains unclear whether they genuinely reason over the underlying connectivity or simply respond to surface-level cues that may trigger learned priors. We probe this question through a controlled study of Attention-Deficit/Hyperactivity Disorder (ADHD) diagnosis from resting-state functional connectivity, isolating one factor at a time to determine what drives an LLM's predictions on brain connectivity graphs. Across six models, from small open-weight LLMs to a proprietary one, the same pattern holds: the results provide little evidence that predictions are consistently grounded in subject-specific connectivity. Brain region names, numeric formatting, and prompt framing shift what a model predicts without improving how well it separates ADHD subjects from Controls; perturbing the graph changes predictions no more for clinically meaningful regions than for random ones; and the models' own justifications contradict the values they cite, inconsistently interpreting the connectivity evidence provided to them. Across every probe, predictions follow the model's built-in class bias and the surface form of the prompt rather than the subject's connectivity, calling into question a premise underlying current LLM brain integration work. Our code is available at https://github.com/Roy025/ADHD-code.",
+  "published": "2026-11-19",
+  "category": "q-bio.NC",
+  "url": "https://arxiv.org/abs/2611.26913",
+  "tags": [
+   "Radiology (CT / MRI / X-ray)",
+   "Clinical LLMs & NLP",
+   "Fairness, bias & robustness"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.26914": {
+  "id": "2611.26914",
+  "title": "Multi-Tier Edge Triage: Optimizing Latency for Safe Clinical Agents",
+  "authors": [
+   "Joshua Broyde",
+   "Sarita A. Joshi"
+  ],
+  "summary": "Deploying generative AI agents in enterprise clinical workflows requires enforcing multi-dimensional safety and compliance policies--preventing HIPAA Protected Health Information (PHI) exposure, maintaining clinical scope-of-practice boundaries, ensuring patient-appropriate reading comprehension, and preserving brand integrity--under interactive latency constraints. Synchronous outbound calls to cloud Large Language Model (LLM) judges add substantial network and decoding overhead onto the critical response path. We present Multi-Tier Edge Triage, a safety screening architecture that co-locates a compact Tier-1 sequence classifier on the clinical agent's host server, resolving clear queries in-process without a network round-trip and escalating only ambiguous queries to a Tier-2 cloud LLM judge. To evaluate Tier-1 encoders without length or unigram shortcuts, we construct four length-matched contrastive twin benchmarks seeded from MedSafetyBench, ASQ-PHI, and a synthetic four-mandate clinical assistant policy (Generic HealthCorp). While frozen local encoders match cloud models on structured PHI detection (>= 98.3% accuracy in <= 23.5 ms), they degrade markedly on semantic safety and symmetric-blocklist prompts. However, end-to-end representation fine-tuning closes the multi-policy accuracy gap: a fine-tuned 335M-parameter BGE-Large classifier achieves 98.90% out-of-fold accuracy versus 99.20% for a zero-shot cloud LLM judge (exact McNemar p = 0.648, zero shared errors), 97.8%-98.2% recall, and a 0.0%-0.4% over-refusal rate in 39.0 ms (>14x faster than cloud LLM evaluation on our benchmark host). Per-policy error analysis reveals ceiling local recall on PHI (100.0%), brand (100.0%), and clinical scope (98.7%-99.3%) violations, isolating residual errors to reading-level checks (93.3%-95.3%) and motivating targeted multi-tier escalation.",
+  "published": "2026-11-20",
+  "category": "cs.LG",
+  "url": "https://arxiv.org/abs/2611.26914",
+  "tags": [
+   "Clinical LLMs & NLP"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.26929": {
+  "id": "2611.26929",
+  "title": "Large Reported CHB-MIT Adaptation Gains Disappear with Pretrained Encoders and Matched Probes",
+  "authors": [
+   "Joseph Sankoorikal Johny",
+   "Antony J. Sankoorikal"
+  ],
+  "summary": "Dani and Liebe (2026) (DL) report that adapting the final encoder block of BIOT and CBraMod with self-supervised learning (SSL) improves CHB-MIT seizure-detection ROC-AUC by 36.2 and 29.5 points over linear probing. We investigate these results with their released code and an independent pipeline. The release loads pretrained weights for adaptation only when an otherwise unset configuration key is supplied, and its CBraMod probe reads the reconstruction head with dropout active. With pretrained initialisation and a probe on the encoder output in evaluation mode, the fixed-recipe adaptation gain on DL's split is -0.6 points for BIOT (95% interval [-3.8, +2.6]) and +0.01 for CBraMod ([-0.02, +0.04]) across five seeds. Across DL's split and five subject rotations on CHB-MIT and Siena Scalp EEG, with equally tuned linear probes (30 configurations, up to 500 epochs, validation-based early stopping), mean adaptation effects range from -1.1 to +5.7 ROC-AUC points over 18 comparisons (related settings and feature variants). Twelve of 18 support equivalence within +/-3 points under dependence-adjusted inference (8 of 12 rotation and 4 of 6 fixed-split comparisons); six are unresolved. After correcting rotation intervals for dependence, no positive effect has a 95% interval excluding zero. The +/-3 margin is an analysis threshold, not a clinically validated one, and smaller margins support fewer equivalences. Two fixed-probe gains near +21 points shrink under the same tuning, with smaller benefits unresolved. We also audit a CHB-MIT protocol shared by at least 14 papers. No tested configuration reproduces DL Table 1 as a whole. These findings concern the tested configurations; the encoder-level probe and subsequent checks were chosen post hoc.",
+  "published": "2026-11-20",
+  "category": "cs.LG",
+  "url": "https://arxiv.org/abs/2611.26929",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.26936": {
+  "id": "2611.26936",
+  "title": "SecretAgent: A Multi-Agent Framework for Privacy Protection against Vision Language Models",
+  "authors": [
+   "Minda Zhao",
+   "Yue Zhang",
+   "Mengyu Wang"
+  ],
+  "summary": "Vision-language models (VLMs) can infer private information from shared images, including locations, personally identifiable information (PII), and personal attributes such as age and sex, even from medical images. Adversarial perturbations can protect such information against black-box VLMs, but existing methods overlook image quality and introduce visible artifacts into the images they protect. We present SecretAgent, the first general multi-agent framework that protects image privacy against VLMs while preserving visual fidelity. LLM agents iteratively locate the visual evidence that reveals private information and adapt an invisible perturbation to the target VLM's answers and to an appearance reviewer agent, which rejects any candidate with visible artifacts. We instantiate SecretAgent with two complementary variants: SecretAgent-Gradient optimizes the perturbation through six surrogate encoders for cross-model transferability, and the gradient-free SecretAgent-Tool composes procedural noise and achieves the best perceptual fidelity on three of the five datasets. Experiments on four privacy applications (geolocation, PII, facial, and medical) across five datasets and six VLMs show that SecretAgent preserves image quality substantially better than existing methods while achieving state-of-the-art privacy protection in every application, and that its protection transfers to other VLMs.",
+  "published": "2026-11-20",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.26936",
+  "tags": [
+   "Clinical LLMs & NLP",
+   "Foundation & vision-language models"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27007": {
+  "id": "2611.27007",
+  "title": "Scalable Evaluation of Medical AI using Evidence-based Practice Recommendations",
+  "authors": [
+   "Teya Bergamaschi",
+   "Bijal Rajput",
+   "Akshay Goel",
+   "Matthew Thompson",
+   "Jacqueline Shreibati",
+   "Dave Steiner",
+   "Ashley Carrick",
+   "Mahvish Nagda",
+   "Dale R. Webster",
+   "Avinatan Hassidim",
+   "Katherine Chou",
+   "Yossi Matias",
+   "Po-Hsuan Cameron Chen",
+   "Christina Chen",
+   "Mike Schaekermann",
+   "Yun Liu",
+   "Anil Palepu"
+  ],
+  "summary": "Rigorously evaluating medical artificial intelligence (AI) requires testing open-ended clinical management across diverse presentations and stages of care. However, existing benchmarks rely on manual expert authoring, limiting coverage across conditions, conditional care pathways, and evolving guidelines. We develop an automated pipeline that extracts and verifies structured clinical criteria and branching decision trees from practice recommendations to generate scenarios spanning the care continuum, including nuanced presentations and practice variations across regions and guideline editions. Applied to 436 BMJ Best Practice clinical monographs (354 US, 82 International), this yields 3,200 scenarios spanning differential diagnosis, investigations, treatment, and complications, plus targeted suites for regional specificity (731 US/International pairs) and temporal freshness (630 scenarios). To grade responses, we develop a clinician-calibrated autorater that scores management plans on a 4-point rubric stratifying deviations by clinical severity. Across Gemini models, scaling improves adherence, while web search (+0.8 percentage points [pp] on average) and multi-sample synthesis (+2.2 pp) combine additively (+2.8 pp). In context, full monographs consistently trail condensed excerpts. On targeted suites, web search narrows international performance gaps (+4.2 pp) and improves adherence to newly updated guidance (+4.6 pp). In a study with Primary Care Physicians (n = 9) across 200 scenarios, AI assistance raises adherence from 50.5% to 70.0%, driven largely by fewer clinical omissions. Overall, our results demonstrate a scalable evaluation setup using an evidence-based corpus originally written to guide human clinical decision-making, and demonstrate its viability to assess medical AI and its assistance on clinician decision-making.",
+  "published": "2026-11-20",
+  "category": "cs.AI",
+  "url": "https://arxiv.org/abs/2611.27007",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27028": {
+  "id": "2611.27028",
+  "title": "Toward a digital twin of the ICU patient: Forecasting and treatment response in a generative event model",
+  "authors": [
+   "Zhuoyang Lyu",
+   "Yiming Li",
+   "Peter C. Hou",
+   "Pengyu Hong",
+   "Li Zhou"
+  ],
+  "summary": "A digital twin of a patient in intensive care would forecast the patient's course and what a treatment would change. Generative event models, trained to continue a patient's electronic health record (EHR), have been proposed as a path toward such twins. We trained TWICE, a 79M-parameter decoder-only transformer, on the ICU records of one academic health system (127,332 training patients and 1.57 billion tokens). We evaluated it on clinical prediction tasks, generation fidelity, individual trajectories and counterfactual validation. Reading 19 clinical outcomes off 50 simulated futures, with no task-specific training, TWICE matched the best of 144 supervised configurations on held-out patients (mean AUROC 0.836 vs. 0.834). It led on events that change care within a day and trailed on death. With the training data fixed, more and longer simulated futures were worth more than a 6.8-fold larger model. Its generated records matched real ones closely and were as specific to each patient as its own variability allowed. Its predicted risk rose as events approached. Pre-specified controls showed that it reproduced the side effects of drugs and was barely moved by an inert drug. On the values that treatments are given to correct, however, an opposite treatment moved its forecasts like the right one. TWICE forecasts ICU events about as well as task-specific models, and we see it as a step toward a digital twin of the ICU patient.",
+  "published": "2026-11-20",
+  "category": "cs.LG",
+  "url": "https://arxiv.org/abs/2611.27028",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27050": {
+  "id": "2611.27050",
+  "title": "Towards Text-Mask Consistency in Medical Image Segmentation",
+  "authors": [
+   "Jie Gui",
+   "Hang Tu",
+   "Wen Sha",
+   "Xiuquan Du"
+  ],
+  "summary": "Vision-language models for medical image segmentation often produce masks that conflict with the accompanying text, especially under multi-site/multi-lesion descriptions. We trace this failure to two factors: (i) highly templated and repetitive clinical language causes one-to-one hard contrastive learning to yield numerous false negatives, weakening cross-modal alignment; and (ii) predominantly vision-driven, one-way cross-attention lacks a language-dominant, spatially aware pathway, hindering effective injection of textual semantics into the spatial visual domain. To this end, we propose Consistency-enhanced Two-stage Segmentation (C2Seg). In the pretraining stage, Cluster-aware Contrastive Learning uses a frozen strong baseline to construct an intra-batch text similarity matrix as soft labels, thereby alleviating false negative conflicts and producing more discriminative visual representations. In the fusion stage, we introduce a Bidirectional Complementary Attention Module, where each modality dominates attention along its own path, fostering deep interaction and structural consistency between visual and textual representations. In order to enhance the expressive power of multimodal features, we further adopt KAN-based Attention Gating. Without updating the language encoder, our approach significantly improves text-mask consistency and segmentation accuracy on four public medical imaging datasets. The source code is available at https://github.com/JGuiidev/C2Seg.",
+  "published": "2026-11-20",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.27050",
+  "tags": [
+   "Segmentation",
+   "Foundation & vision-language models"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27057": {
+  "id": "2611.27057",
+  "title": "Learning 3D MRI Representations with Generative Adversarial Networks",
+  "authors": [
+   "Sujeet Lahane",
+   "Sapna Mishra",
+   "Akash Suryavanshi",
+   "Tapan Gandhi",
+   "Bharat Biswal"
+  ],
+  "summary": "Learning representations of visual images is a challenging task. It requires extracting abstract patterns from high-dimensional data without explicit supervision. This becomes pronounced with 3D MR imaging due to sparse features, higher dimensional inputs, and smaller datasets. Many state-of-the-art representation learning algorithms successfully rely on transformers and diffusion-based architectures. However, these methods struggle with smaller datasets. In effect, solution methods relax the problem by slicing 3D volumes and solving the problem for 2D medical imaging, resulting in a loss of spatial 3D information. We present R2RG, a representation learning method based on Convolutional Neural Networks (CNNs), with Generative Adversarial Networks (GANs) honing the reconstruction task. Our key insights lie in exploiting architectural biases in 3D CNNs, combined with data-efficient auto-encoding GANs and a composite loss function to enhance reconstruction fidelity and stabilize training. Our experiments on three standard datasets and a locally collected dataset show that R2RG not only achieves superior performance but also generalizes to heterogeneous and smaller datasets. Furthermore, representations learned with R2RG outperform those learned with contrastive-based representation learning methods on Parkinson's and Alzheimer's disease classification. Our work demonstrates that reconstruction-based representation learning is a promising direction for 3D medical imaging under limited data availability.",
+  "published": "2026-11-20",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.27057",
+  "tags": [
+   "Radiology (CT / MRI / X-ray)"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27101": {
+  "id": "2611.27101",
+  "title": "EgoSurgHands: An Egocentric 3D Hand Pose Dataset & Benchmark for Open Surgery Training",
+  "authors": [
+   "Ankit Pal",
+   "Guillaume Kugener",
+   "Sofia Volpi",
+   "Joshua Schwartz",
+   "Alex Idarraga",
+   "Pranav Rajpurkar",
+   "Gabriel A. Brat"
+  ],
+  "summary": "Surgical skill assessment, AR guidance, and robot learning from demonstration all benefit from 3D tracking of the surgeon's hands, yet no surgical dataset offers real egocentric articulated 3D hand pose. We introduce EgoSurgHands, a benchmark for real-captured egocentric hand pose estimation in open surgery training on synthetic pads. Captured with multi-sensor glasses, it contains 41,909 training hand-instance rows across 55 procedure recordings and 9,476 human-validated evaluation rows across 13 held-out recordings, spanning 13 tasks, 3 glove colors, and 4 trainees from first-year medical student to third-year resident. Each frame carries a multi-sensor stack: intrinsics, hand landmarks with per-hand confidence, timestamps, and eye gaze, plus SLAM extrinsics where SLAM succeeded. Evaluation labels combine sensor-fused pseudo-ground truth, human cross-review of every frame, surgeon adjudication of flagged cases, and an independent multi-view triangulated reference. Alongside the within-corpus, procedure-disjoint split, a leave-one-wearer-out protocol tested unseen trainees. Across eight methods evaluated zero-shot, from MANO-based reconstructors to the two-hand IntagHand and the keypoint-only MediaPipe Hands, egocentric pretraining was associated with stronger transfer on every held-out wearer. WildHands and JointTransformer had 18\\% and 40\\% lower PA-MPJPE, respectively, than the non-egocentric HaMeR. JointTransformer was the best performing model with an error of 14.95 mm. A substantial surgical domain gap remains, and the widely deployed MediaPipe Hands detected a hand in only 24.1\\% of evaluation rows. As a baseline, a 58K-parameter residual corrector (JRN) on frozen backbones reached 10.96-14.85 mm PA-MPJPE on held-out wearers for the two ego-pretrained backbones. We release the dataset and benchmark code at https://egosurghands.github.io",
+  "published": "2026-11-20",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.27101",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27114": {
+  "id": "2611.27114",
+  "title": "Federated and Balanced $k$-means: Communication Efficiency, Privacy, and Heterogeneity",
+  "authors": [
+   "Feiteng Nie",
+   "Shengkun Zhu",
+   "Sheng Wang",
+   "Yuan Sun",
+   "Feiping Nie",
+   "Wei Song",
+   "Zhiyong Peng"
+  ],
+  "summary": "Collaborating on data across organizations in healthcare and finance demands methods that preserve privacy while enabling effective analysis. Vertical Federated Learning (VFL) facilitates clustering across data where different parties hold different features of the same entities without sharing raw data. However, existing VFL clustering methods suffer from two key limitations: vulnerability to information leakage and the creation of imbalanced clusters. To address these limitations, we propose Fabric, a balanced and privacy-preserving federated $k$-means algorithm. Our method decomposes the balanced clustering problem into independent subproblems for each client, using the Alternating Direction Method of Multipliers (ADMM) to efficiently handle the balance constraints. Under the semi-honest model, Fabric provides provable privacy guarantees by injecting calibrated noise into local objective evaluations. Extensive evaluations on ten real-world datasets show that Fabric achieves a superior utility-privacy trade-off compared with state-of-the-art methods and converges faster. Specifically, Fabric reduces SSE by 29.1\\% on average and improves balance performance by 1.41$\\times$, while being 26$\\times$ faster on average.",
+  "published": "2026-11-20",
+  "category": "cs.LG",
+  "url": "https://arxiv.org/abs/2611.27114",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27142": {
+  "id": "2611.27142",
+  "title": "How Does SAM-3 Adapt? Capacity, Update Geometry, and Domain Transfer",
+  "authors": [
+   "Allan Kazakov",
+   "Abdurrahman Javat",
+   "Duygu Cakir"
+  ],
+  "summary": "Promptable segmentation foundation models are increasingly used in specialized domains, but it remains unclear how SAM-3 should be fine-tuned when adapting it beyond its original training distribution. We study this question by comparing five adaptation families --LoRA, HiRA, KRAdapter, QuanTA, and Full Fine-Tuning-- across five segmentation datasets spanning medical imaging, remote sensing, and dense material segmentation. Across these datasets, compact parameter-efficient fine-tuning methods often match or approach Full Fine-Tuning in DSC and IoU, suggesting that strong in-domain adaptation does not always require updating the full model. However, this performance cannot be explained by nominal adapter rank or trainable parameter count alone. To investigate why different methods perform similarly, we analyze their update spectra and their behavior under LoveDA Urban/Rural transfer. Our SVD analysis shows that Full Fine-Tuning updates are spectrally compressible. However, successful PEFT methods do not simply recover the same update directions; instead, they often concentrate changes in different components and subspaces. The domain-transfer study further shows that methods with similar in-domain performance can respond differently under distribution shift. Together, these results suggest that SAM-3 adaptation is often capacity-saturated in practice, while competitive fine-tuning arises through method-specific update paths rather than a single low-rank approximation to Full Fine-Tuning.",
+  "published": "2026-11-20",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.27142",
+  "tags": [
+   "Segmentation"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27183": {
+  "id": "2611.27183",
+  "title": "GEG-SAM: Gaze Exploration-Guided Segment Anything Model for Weakly Supervised Polyp Segmentation",
+  "authors": [
+   "Ao Wang",
+   "Lei Zhang",
+   "Lituan Wang",
+   "Zhenwei Zhang",
+   "Xiangbao Gong",
+   "Zhiyi Zhang",
+   "Shunyao Wang",
+   "Xianglei Yuan",
+   "Zizhou Wang"
+  ],
+  "summary": "Endoscopist gaze offers an unobtrusively acquired record of lesion-oriented visual exploration during routine clinical inspection, providing relevant supervision for tasks. However, existing methods treat fixations as isolated spatial prompts directly associated with the target, overlooking the fact that natural gaze records a continuous visual search process in which fixations are temporally connected, spatially organized, and coupled with the visual content. Interpreting each fixation independently based only on its local visual content overlooks the temporal evolution and spatial organization of the gaze trajectory, whereas modeling relations among fixations alone cannot reveal the visual semantics of the regions they attend to. To this end, we propose the Gaze Exploration-Guided Segment Anything Model (GEG-SAM), a principled weakly supervised framework designed to explicitly exploit structured gaze relations and their corresponding visual cues to modulate SAM for polyp segmentation. Specifically, GEG-SAM captures structured gaze relations by modeling the temporal dynamics and spatial topology of gaze exploration. It then associates these relational representations with fixation-aligned visual context to derive gaze-conditioned tokens, which are further injected into the frozen SAM encoder to modulate its pretrained image features. In this way, GEG-SAM effectively exploits the rich information embedded in gaze exploration to guide SAM toward lesion-oriented segmentation. Extensive experiments on five public polyp segmentation datasets demonstrate the effectiveness of our approach, improving the mean Dice by 9.30 percentage points over the strongest weakly supervised baseline.",
+  "published": "2026-11-20",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.27183",
+  "tags": [
+   "Segmentation"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27206": {
+  "id": "2611.27206",
+  "title": "LingSante-Pulse: Unified Physiological Pretraining through Random-Feature Prediction and Cross-Modal Alignment",
+  "authors": [
+   "Linxiao Yang",
+   "Wenwei Wang",
+   "Tian Zhou",
+   "Bingqing Peng",
+   "Zihao Zhang",
+   "Zuyi Zhu",
+   "Jinjie Gu",
+   "Liang Sun"
+  ],
+  "summary": "Clinical monitoring and wearable devices capture complementary physiological signals, but their partially overlapping modality coverage makes within-signal information and cross-modal relationships difficult to exploit jointly. We introduce LingSante-Pulse, a unified, general-purpose and flexible physiological representation framework that learns from these heterogeneous recordings. A shared, signal-conditioned encoder processes each physical channel independently and supports different numbers and combinations of signals for multimodal assessment and single-sensor inference. Pairwise cross-modal alignment, structured random-feature prediction (RFP) and masked waveform reconstruction jointly learn physiological relationships and preserve informative within-signal structure. Across 38 general physiological task configurations spanning PPG, ECG, EEG and EMG, the frozen encoder achieves the best dataset-balanced mean rank in each domain. In sleep assessment, multimodal staging on the HMC dataset and EEG-only staging on the Sleep-EDF dataset reach Macro-F1 scores of 0.7784 and 0.7941, respectively, while single-lead ECG apnea screening achieves an AUROC of 0.9183. Controlled experiments show that function prediction and waveform reconstruction provide complementary supervision for retaining temporal and rhythmic information. Representations learned under continually refreshed random supervision generalize to unseen teacher realizations, and correct auxiliary modality correspondence improves respiration-only representations. These results demonstrate that a single encoder can learn reusable physiological features across signal types, prediction targets and sensor configurations from partially overlapping recordings.",
+  "published": "2026-11-20",
+  "category": "cs.LG",
+  "url": "https://arxiv.org/abs/2611.27206",
+  "tags": [
+   "Foundation & vision-language models"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27283": {
+  "id": "2611.27283",
+  "title": "DermKG: A Concept-Centric Knowledge Graph for Interpretable Skin Disease Diagnosis from Dermatological Morphology",
+  "authors": [
+   "Cheng Huang",
+   "Yanmei Li",
+   "Mao Lin"
+  ],
+  "summary": "Dermatologists describe lesions with a standardized morphological lexicon, which makes concept-based models attractive for interpretable skin disease diagnosis. How much diagnostic information these concepts actually carry, however, is rarely quantified. We present DermKG, a concept-centric knowledge graph built on the expert-annotated SkinCon subset of Fitzpatrick17k (3,230 images, 48 concepts, 113 diseases). DermKG has 3,452 nodes of 8 types and 19,365 edges of 11 relation types, and encodes disease concept profiles, concept co-occurrence, a three-level diagnostic hierarchy, and 20 clinical morphology rules, all of which are supported by the training data (15 strong, 5 moderate). An information-ceiling analysis shows that the 3,230 lesions collapse onto only 813 distinct concept vectors, bounding concept-only top-1 accuracy at 38.9\\% for diseases and 77.6\\% for the nine categories. Within this bound, DermKG-Net, a graph neural network that scores lesions against disease prototypes and aggregates them along the hierarchy, raises category-level balanced accuracy from 0.257 to 0.411 over the strongest of 11 baselines (paired bootstrap difference $+0.150$, 95\\% CI $[0.073, 0.231]$) and more than doubles minority-category recall. Ablations show that most of this gain comes from the hierarchical prototype objective, with a smaller contribution from graph structure. DermKG further yields rule-based reasoning chains and concept-level explanations for individual predictions.",
+  "published": "2026-11-20",
+  "category": "cs.AI",
+  "url": "https://arxiv.org/abs/2611.27283",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27301": {
+  "id": "2611.27301",
+  "title": "Observed, Curated, Reused: Observation Bias in Clinical AI Evaluation",
+  "authors": [
+   "Md Shamim Ahmed",
+   "Lukas Galke Poech",
+   "Richard Röttger"
+  ],
+  "summary": "Clinical AI evaluations are vulnerable to observation bias embedded in routine medical documentation, which captures only what clinicians notice, test, and record rather than a complete clinical picture. As this evidence travels into publications and reference knowledge graphs, crucial distinctions disappear: unexamined symptoms blur with confirmed negatives, and chronological disease progression is lost. Surviving evidence can also enter both the benchmark query and the reference knowledge base, creating a self-referential loop where a patient is evaluated against clues derived from their own published case report. To quantify this bias, we tracked 6,503 clinical cases across six historical Human Phenotype Ontology (HPO) releases (October 2021-June 2026) to identify when HPO first cited the publications describing them. This yielded a confirmatory cohort with an observable \"source ingestion\" event, where HPO cited a case's source publication as target-disease evidence. Diagnostic rankers depended heavily on these source publications: for our primary semantic ranker (Resnik), publication-weighted mean reciprocal rank rose from 0.26 before paper ingestion to 0.84 upon inclusion in HPO, but collapsed to 0.05 when source-linked assertions were counterfactually removed. Two additional rankers (IC-cosine and LIRICAL) reproduced this trajectory, and control experiments confirmed the diagnostic jump was driven by the patient's publication rather than background HPO growth. Clinical AI systems may therefore score well because their knowledge base contains evidence linked to the test case's source publication, rather than through generalization. Modern knowledge is not the problem; evaluation evidence must match the claim. Trustworthy benchmarks must separate patients, source-linked evidence, and time: historical tests should use only knowledge available at the intended decision time.",
+  "published": "2026-11-20",
+  "category": "cs.CL",
+  "url": "https://arxiv.org/abs/2611.27301",
+  "tags": [
+   "Fairness, bias & robustness"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27390": {
+  "id": "2611.27390",
+  "title": "Evidence sufficiency assessment enables cost-effective review allocation in on-premise clinical AI agents",
+  "authors": [
+   "Yiwen Qiu",
+   "Che Sun",
+   "Shu Shen",
+   "Wentao Wang"
+  ],
+  "summary": "On-premise clinical AI agents must auto-accept high-confidence diagnoses, deferring others to clinician review, yet token probabilities and self-reported confidence miss errors, while more reliable five-run consistency incurs fivefold compute. We propose training-free decision-point evidence sufficiency assessment and a three-tier sequential triage protocol. Masking reasoning and diagnosis, the same 4B model scores sufficiency from objective evidence via prior-debiased probabilities over five ordered levels. Calibration freezes a nominal top-50% threshold, selecting single-run, five-run consistency, or full-deferral tiers by whether the one-sided 95% Wilson lower confidence bound of pass rate among accepted cases meets the 95% clinical target line. Across 1,605 MIRA-v2, CDM, VivaBench, and in-hospital liver malignancy primary cohort cases, MIRA-v2 single-run top-50% pass rate reached 98.91%, matching five-run consistency, saving ~80% compute; CDM achieved 96.00% test attainment by escalating to the five-run consistency tier; cross-specialty, missing-imaging, and combined enriched cohorts entered the full-deferral tier, capping calibration false-certification rate at 0.00%-3.50%.",
+  "published": "2026-11-20",
+  "category": "cs.AI",
+  "url": "https://arxiv.org/abs/2611.27390",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27425": {
+  "id": "2611.27425",
+  "title": "TrojanMaxxing: One-shotting VLM Backdoors with Weight-Space Programming",
+  "authors": [
+   "Ahaan Dabholkar",
+   "Harshvardhan Patel",
+   "Michalis Polychronakis",
+   "Saurabh Bagchi"
+  ],
+  "summary": "Recent work shows that large language models (LLMs) can reason directly about the weights of other neural networks. Given only a natural-language objective, an LLM can inspect a model's weights, understand what they compute, and edit them directly without gradient-based optimization. This capability, termed weight-space programming (WSP), has been used to improve model performance on math reasoning, medical QA and other benchmarks. We propose TrojanMaxxing, a novel strategy to backdoor vision-language models (VLMs), by reframing it as a WSP task. We use Claude Opus 5.5 and Mythos 5.2 agents to backdoor VLMs without any optimization or training methods. The agents inspect the model weights, apply targeted edits, and co-design an imperceptible visual trigger that activates the backdoor. We then study the agents' strategies and present a thorough evaluation of the trojaned models on various benchmark datasets. TrojanMaxxing achieves attack success rates of 93%-100% on content moderation and 78%-100% on OCR while maintaining clean accuracy. Perhaps most consequentially, we show that injecting backdoors in a training-free manner is possible by simply, \"asking an agent to do it\".",
+  "published": "2026-11-20",
+  "category": "cs.CR",
+  "url": "https://arxiv.org/abs/2611.27425",
+  "tags": [
+   "Clinical LLMs & NLP",
+   "Foundation & vision-language models"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27427": {
+  "id": "2611.27427",
+  "title": "Neurodegenerative Differential Diagnosis with Knowledge-enhanced Structural Reasoning",
+  "authors": [
+   "Mingxuan Wang",
+   "Siyuan Du",
+   "Yanfeng Wang",
+   "Ya Zhang",
+   "Chencheng Zhang",
+   "Jiangchao Yao"
+  ],
+  "summary": "Accurate differential diagnosis of neurodegenerative disorders remains challenging due to overlapping clinical manifestations and heterogeneous, often incomplete multimodal observations. Existing multimodal models can integrate imaging and clinical measurements but often overlook disease-specific evidence patterns and pairwise relations among competing diagnoses. We therefore propose Knowledge-enhanced Structural Reasoning (KnowSR), which aligns multimodal patient representations with a literature-grounded knowledge bank of disease prototypes, signed evidence directions, and pairwise diagnostic relations. Specifically, in KnowSR, patient-specific knowledge alignment and target-aware pooling inject structured disease evidence, while anchored relational reasoning reconciles pairwise diagnostic margins over a sparse differential graph, thereby collectively enhancing differential diagnostic capability. Across extensive experiments, KnowSR consistently outperforms 19 baselines on patient-level six-class diagnosis under patient-disjoint five-fold evaluation. This shows that grounding patient evidence in structured medical knowledge enables more effective differential diagnosis than naive multimodal fusion alone.",
+  "published": "2026-11-20",
+  "category": "cs.CE",
+  "url": "https://arxiv.org/abs/2611.27427",
+  "tags": [
+   "Foundation & vision-language models"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27469": {
+  "id": "2611.27469",
+  "title": "PathOPEN: A pathologist-curated histopathology dataset for visual question answering",
+  "authors": [
+   "Awais Naeem",
+   "Zhongling Xu",
+   "George Huang",
+   "Amy Coffey",
+   "Nkechi Okonkwo",
+   "Mario Saab-Chalhoub",
+   "John Lee Sang",
+   "Dina Kokh",
+   "Muhammad Zulfiqar",
+   "Ankita Shukla",
+   "Hairong Wang",
+   "Chandra Krishnan",
+   "Ying Ding"
+  ],
+  "summary": "PathOPEN is a histopathology dataset for visual question answering. Two clinical pathologists selected 157 cases with 229 available original images and wrote open-ended, five-option multiple-choice and close-ended (yes/no) questions. They supplied both a correct and a wrong answer for 201 of the 309 open-ended questions. Each case records the organ, pathology category and regional anatomy, and each image records its magnification. The dataset includes 6,870 augmented images and four manifests that select subsets to improve balance by individual metadata field. Five additional pathologists and two vision-language model judges rated items with scoring rubrics, and six models answered questions zero-shot across the three formats. The metadata support subgroup evaluation, and the paired answers can be used to construct preference examples.",
+  "published": "2026-11-20",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.27469",
+  "tags": [
+   "Digital pathology",
+   "Clinical LLMs & NLP",
+   "Foundation & vision-language models"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27511": {
+  "id": "2611.27511",
+  "title": "Breaking the Barrier of Hard Samples: A Data-Centric Approach to Synthetic Data for Medical Tasks",
+  "authors": [
+   "Maynara Donato de Souza",
+   "Cleber Zanchettin"
+  ],
+  "summary": "Data scarcity and quality issues remain significant barriers to developing robust predictive models in medical research. Traditional reliance on real-world data often leads to biased models with poor generalizability across diverse patient populations. Synthetic data generation has emerged as a promising solution, yet challenges related to these samples' representativeness and effective utilization persist. This paper introduces Profile2Gen, a novel data-centric framework designed to guide the generation and refinement of synthetic data, focusing on addressing hard-to-learn samples in regression tasks. We conducted approximately 18,000 experiments to validate its effectiveness across six medical datasets, utilizing seven state-of-the-art generative models. Results demonstrate that refined synthetic samples can reduce predictive errors and enhance model reliability. Additionally, we generalize the DataIQ framework to support regression tasks, enabling its application in broader contexts. Statistical analyses confirm that our approach achieves equal or superior performance compared to models trained exclusively on real data.",
+  "published": "2026-11-20",
+  "category": "cs.LG",
+  "url": "https://arxiv.org/abs/2611.27511",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27517": {
+  "id": "2611.27517",
+  "title": "EchoAlign: Echocardiography foundation model with multilevel report alignment",
+  "authors": [
+   "Ahmed Aly",
+   "Darya Taratynova",
+   "Lotfi Abdelkrim Mecharbat",
+   "Roman A. Sandler",
+   "Joseph Z. Sokol",
+   "Joshua Penn",
+   "Klaus H. Maier-Hein",
+   "Numan Saeed",
+   "Mohammad Yaqub"
+  ],
+  "summary": "Echocardiography assesses the structure and function of the heart. Cardiologists read each study across several standard views and report the findings visible in those views by cardiac structure. AI foundation models can learn to analyze these studies from clinical reports, reducing annotation burden and supporting clinical interpretation. However, existing models are trained by pairing each video with the full clinical report, including structures and findings its view does not show. This mismatch lets a model associate a finding with incidental or spurious signals rather than its visual evidence, which limits accuracy, anatomical grounding and clinical trust. Here we introduce EchoAlign, a vision-language foundation model developed on 2.87 million echocardiographic videos and images from 159 clinical centers. EchoAlign aligns each cardiac structure, video and study with its report text, and a visibility matrix restricts supervision to the views that actually depict each structure. We compare it with five public foundation models on 0.47 million test videos across ten unseen external datasets from more than 25 clinical centers. EchoAlign achieves the highest mean AUROC of 0.890 (95% CI, 0.881 to 0.897) for classification and the highest mean quadratic weighted kappa of 0.530 (95% CI, 0.511 to 0.544) for severity grading. Across 62 clinical findings, EchoAlign provides one model that detects findings, grades their severity, estimates measurements and segments cardiac structures.",
+  "published": "2026-11-20",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.27517",
+  "tags": [
+   "Foundation & vision-language models"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27585": {
+  "id": "2611.27585",
+  "title": "Leakage-Free Is Not Confounder-Free: What a Patient-Level Split Cannot Certify About a Medical Imaging Benchmark",
+  "authors": [
+   "Ignazio Gallo",
+   "Mattia Gatti",
+   "Leonardo Sgroi",
+   "Darwin Castillo",
+   "Yuliana Jiménez-Gaona",
+   "Nicola Landro"
+  ],
+  "summary": "Patient-level splitting is the standard safeguard against subject leakage in medical imaging evaluation, but it cannot remove a confounder that every fold inherits: an acquisition variable aligned with the diagnosis across the whole cohort. We present a five-question audit of a candidate confounder: how well it predicts the diagnosis, whether it can be decoded from the images, whether diagnostic scores depend on it, whether the image adds predictive value beyond it and how much discrimination survives once it is controlled. We apply it to DMR-IR, the public dataset on which most machine-learning results in breast thermography rest. On 236 patients under a strict patient-disjoint protocol, the acquisition date alone predicts malignancy at AUROC 0.980, above the best of nine imaging arms (0.949), because benign and malignant patients were recruited in different years. The acquisition year is decodable from the pixels among patients who share a diagnosis, largely through a global thermal offset outside the breast, yet only one arm, the one pooling every frame of a visit, demonstrably carries it into its diagnostic score. No arm improves on the date on paired folds, and once the date is controlled, discrimination either collapses or survives only on comparisons the benchmark cannot attribute. The dataset contains only eight cross-label same-date pairs, from ten patients, which limits reliable evaluation within recorded acquisition-date groups. A second, independently acquired cohort, whose dominant channel is patient age, returns the same audit outcome from a different confounder. Mitigation may suppress such a confounder, but without cross-label acquisition support no evaluation on the benchmark can certify that what remains is pathology.",
+  "published": "2026-11-20",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.27585",
+  "tags": [
+   "Digital pathology"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27783": {
+  "id": "2611.27783",
+  "title": "A Benchmark Protocol and Fairness Analysis Towards Open-Set EEG Seizure Type Classification",
+  "authors": [
+   "Targol Bakhtiarvand",
+   "Terrance E. Boult",
+   "Jugal Kalita",
+   "Adham Atyabi"
+  ],
+  "summary": "Automated EEG seizure type classification systems are typically trained and evaluated under the closed-set assumption, where all seizure types encountered at deployment are seen during training. In clinical practice, this assumption fails: patients present with rare or atypical seizure types that fall outside the training label space, and a system that forces a wrong label is worse than one that abstains. We introduce the first open-set recognition protocol for EEG seizure type classification on the Temple University Hospital Seizure Corpus (TUSZ v2.0.3), defining known and unknown classes using the clinical taxonomy itself: seizure types with sufficient subject representation (at least 12 subjects) form the known set, and rare types form the unknown set. We evaluate seven post-hoc open-set scorers (MSP, MaxLogit, energy, Mahalanobis, kNN, GHOST, and COSTARR) applied to a partially fine-tuned EEG Foundation Model (EFM), using a subject-disjoint leave-one-class-out (LOCO) protocol over three seeds that tests whether methods can detect seizure types excluded from fine-tuning. On true unknown classes, the best scorer (Mahalanobis) reaches a mean AUROC of 0.66, and differences among the top scorers are within seed-to-seed variation. Held-out known seizure types from unseen subjects are detected only slightly above chance (AUROC 0.54-0.58 for all scorers). Per-subject rejection rates are highly uneven for all scorers, and GHOST does not significantly improve per-subject fairness over energy scoring (two-sided Wilcoxon signed-rank, p >= 0.25). We release the protocol, subject splits, and code as an initial baseline; our results indicate that open-set seizure type recognition remains a hard, open problem.",
+  "published": "2026-11-20",
+  "category": "cs.AI",
+  "url": "https://arxiv.org/abs/2611.27783",
+  "tags": [
+   "Foundation & vision-language models",
+   "Fairness, bias & robustness"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27792": {
+  "id": "2611.27792",
+  "title": "Feasibility of Multifrequency Neural Network-Based Wave Inversion in Ultrasound Time-Harmonic Elastography",
+  "authors": [
+   "Héloïse Bustin",
+   "Tom Meyer",
+   "Paul Spiesecke",
+   "Jakob Jordan",
+   "Anja Hennemuth",
+   "Ingolf Sack"
+  ],
+  "summary": "Ultrasound time-harmonic elastography (THE) is a non-invasive imaging technique that measures soft-tissue stiffness. Relying on the same principle of time-harmonic shear wave excitation as established magnetic resonance elastography (MRE), THE offers full field-of-view stiffness mapping at short acquisition times and sub-second temporal resolution across organs. However, reconstruction of shear wave speed maps from acquired tissue wavefields remains challenging due to speckle noise and sparse spatial coverage of the lateral component. Deep learning methods have shown promising results for image reconstruction in transient-based ultrasound elastography modalities but remain unexplored in THE. In MRE, MF-ElastoNet, a 2D multifrequency neural network-based wave reconstruction method trained on synthetic physics-based wave data, has shown high generalizability across dynamic ranges and resolutions. We investigated the potential of a multifrequency neural network-based wave inversion for THE, by performing a first feasibility analysis. To this end, we adapted the processing pipeline of MF-ElastoNet from MRE to THE. We tested our approach on THE acquired phantom data from the algorithms for mapping elastic modulus Challenge, as well as on in vivo liver THE in 4 healthy volunteers and 14 patients with focal liver lesions, including benign focal nodular hyperplasia, and malignant hepatocellular carcinoma and adenocarcinoma. MF-ElastoNet was successfully adapted to THE with in vivo liver testing. Compared with k-MDEV, the state-of-the-art wave inversion method for THE, Bland-Altman analysis showed a mean bias of -0.02 m/s (95% limits of agreement: -0.36 to 0.33 m/s).",
+  "published": "2026-11-20",
+  "category": "eess.IV",
+  "url": "https://arxiv.org/abs/2611.27792",
+  "tags": [
+   "Radiology (CT / MRI / X-ray)",
+   "Fairness, bias & robustness"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27810": {
+  "id": "2611.27810",
+  "title": "SLP-Bench: Evaluating and Improving Acoustic Claims of Reasoning Audio Language Models on Clinical Speech",
+  "authors": [
+   "Côme Hosxe",
+   "Rachid Riad",
+   "Quentin Spinat"
+  ],
+  "summary": "Audio language models (ALMs) can answer clinical questions from speech, outperforming baselines built on handcrafted acoustic features. Reasoning ALMs generate a chain of thought that refers to properties of the speaker's voice before predicting. Each statement the model makes about the voice needs to be checked against clinicians' perceptual ratings of the same recording. On clinical speech, existing evaluations score only the final answer. We introduce Speech Language Pathologist Bench (SLP-Bench), a benchmark grading each acoustic claim in the chain of thought against clinicians' perceptual ratings of the same recording. It covers five clinician-rated datasets and 25 perceptual dimensions, and assesses claims for factuality, stability under resampling, and consistency across reworded and different questions. Across ten open-weight reasoning ALMs evaluated zero-shot, claim balanced accuracy ranges from 0.52 to 0.58, claims change under resampling and rewording, and the most consistent models are not the most factual. Fine-tuning a 7B ALM with GRPO on a reward for claims that agree with clinicians raises its claim balanced accuracy from 0.54 to 0.60 and its mean kappa from 0.39 to 0.61, while preserving answer accuracy on per-dimension questions. SLP-Bench is available upon request, subject to approval by the providers of each dataset.",
+  "published": "2026-11-20",
+  "category": "cs.AI",
+  "url": "https://arxiv.org/abs/2611.27810",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27876": {
+  "id": "2611.27876",
+  "title": "LesionAgent: Training-Free Agentic Tumor Tracking and Response Assessment in Longitudinal CT",
+  "authors": [
+   "Maximilian Rokuss",
+   "Jeya Maria Jose Valanarasu",
+   "Alejandro Lozano",
+   "Benjamin Hamm",
+   "Yannick Kirchhoff",
+   "Fabian Isensee",
+   "Klaus Maier-Hein"
+  ],
+  "summary": "Every few months, a cancer patient's CT scans decide whether treatment continues. 3D foundation models can now detect, segment, register and track lesions, yet none of them reads the scans as a radiologist does. A radiologist decides which findings are lesions, which are the same lesion months later and whether a new spot means progression, and checks each decision against the extensive rules of a clinical guideline. We introduce LesionAgent, an LLM agent that performs this read end to end without task-specific training. It operates frozen 3D models as tools, acts in 3D through coordinate-labelled views, remembers every lesion across visits in a registry, verifies every model output it relies on, and leaves every number to a deterministic guideline engine. On four public longitudinal CT datasets, LesionAgent tracks more lesions and measures them more accurately than every automatic baseline, and where the same 3D models chained by fixed rules call progression falsely at 33 of 56 follow-ups, it does so twice. On clinical follow-up CTs, it agrees with the radiologists' response at 20 of 23 follow-ups, including every change in response, and without training on DeepLesion, it retrieves more of its lesions than every tracker trained on it (89.0% vs. 87.4%). Its harness, not its LLM, makes the difference: given the same LLM and 3D models but not the harness, Claude Code reaches a detection F1 of 41% and LesionAgent 78%, and an open-weight LLM that can run inside the hospital rises from 6% to 73%. LesionAgent and a napari reading app for any LLM are available at https://github.com/MIC-DKFZ/LesionAgent.",
+  "published": "2026-11-20",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.27876",
+  "tags": [
+   "Segmentation",
+   "Radiology (CT / MRI / X-ray)",
+   "Clinical LLMs & NLP"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27881": {
+  "id": "2611.27881",
+  "title": "Interpretable Tissue Architecture Complements Pathology Foundation Models",
+  "authors": [
+   "Zeeshan Shahid",
+   "Hammam M. AlGhamdi"
+  ],
+  "summary": "Tissue architecture provides important information for histopathological assessment, yet its complementary predictive value alongside pathology foundation-model representations remains insufficiently understood. This study investigates whether interpretable measurements of cellular and multicellular tissue organization provide additional predictive information beyond learned representations. We introduce a 139-dimensional cellular-to-community representation comprising nine feature groups characterizing nuclear morphology, cellular composition, spatial connectivity, community organization, and cell-cell interactions. Their predictive contributions are systematically evaluated independently and through feature-level fusion with CTransPath and PLIP embeddings using multiple-instance learning (MIL). On the BCNB dataset, estrogen receptor (ER) and progesterone receptor (PR) classification is evaluated across four MIL architectures using five-fold patient-disjoint cross-validation. Selected CTransPath fusion configurations achieved mean ROC-AUC values of 0.9144 (ER) and 0.8360 (PR), while PLIP fusion achieved 0.8791 and 0.8015, respectively. Patient-level analyses identified ER-associated differences in nuclear morphology, graph connectivity, cellular communities, and cell-cell interactions. On LungHist700, selected fusion configurations achieved higher mean ROC-AUC across four classification tasks, including adenocarcinoma versus squamous cell carcinoma (0.7967 versus 0.7137 for CTransPath alone). Overall, these findings suggest that interpretable tissue-architecture descriptors can complement foundation-model representations while providing measurable insights into histopathological organization.",
+  "published": "2026-11-20",
+  "category": "cs.CV",
+  "url": "https://arxiv.org/abs/2611.27881",
+  "tags": [
+   "Digital pathology"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27895": {
+  "id": "2611.27895",
+  "title": "TEA-Bench-BR: Can Coding Agents Turn a Branching Clinical Specification into Correct Code?",
+  "authors": [
+   "Marcio Andre de Souza Estevam"
+  ],
+  "summary": "Coding agents increasingly implement rules written by domain experts, and bugs in such code are silent: it runs and returns a plausible answer. We introduce TEA-Bench-BR, a benchmark built on the Brazilian pathway for early autism (TEA) screening: three fictitious instruments with the structure of real ones, a multi-professional referral flow, and export to FHIR R4 with the national RNDS profiles, all specified in Portuguese. A generator samples each task's parameters (144 tasks, 6,798 hidden cases), and the hidden cases kill all 1,955 non-equivalent mutants of the reference. With Gemma 4 as the agent, the 12B solves 38.0% of single-instrument tasks and none at the FHIR level; the 31B solves 77.8%, 85.2% and 78.7% at levels 1 to 3 and passes over 99% of the hidden cases, its remaining failures mostly in input validation rather than clinical decisions. With the same tasks in English, the 31B solves 57.4% at level 3, as its code validates an identifier less often; the 12B's, more often. The 12B misses 10.10% of the cases that call for referral; the 31B, 0.02%. A contamination probe on a modified PHQ-9 finds no error that follows the original rules.",
+  "published": "2026-11-20",
+  "category": "cs.SE",
+  "url": "https://arxiv.org/abs/2611.27895",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
+ },
+ "2611.27900": {
+  "id": "2611.27900",
+  "title": "Communication-Efficient Federated Learning of Latent Patient Representations from Multi-Institutional EHRs",
+  "authors": [
+   "Zhiyu Yan",
+   "Shiao Liu",
+   "Rahul Mahajan",
+   "Anand Viswanathan",
+   "Christopher D. Anderson",
+   "Rui Duan"
+  ],
+  "summary": "Electronic health records (EHRs) contain rich health information for uncovering latent patient representations and clinically meaningful subgroups. Learning from EHR data across institutions is valuable because representations learned at a single site may reflect local data patterns and lack generalizability, yet pooling patient-level records across institutions is often impractical because of privacy constraints and communication costs. We propose a communication-efficient, non-iterative federated spectral method for learning shared latent representation components from multi-institutional EHRs, in which each institution shares aggregate marginal frequencies and a low-rank spectral summary while keeping patient-level records local. A central server aggregates these summaries with the pooled marginal frequencies to recover both the shared low-rank structure and the canonical row-normalization direction required for interpretable representation recovery. We prove row-wise recovery guarantees and error bounds, with a leading federated variance term matching a corresponding lower bound under explicit regularity conditions. Simulations show that our method closely matches pooled analysis in estimating latent representation components, improves as more sites contribute summaries, and outperforms single-site and existing federated benchmarks across a range of data settings. Applied to real-world multi-facility EHR data for stroke patients, the method learns interpretable patient representations that highlight clinically distinct subgroups and could help inform subgroup-specific care.",
+  "published": "2026-11-20",
+  "category": "stat.ML",
+  "url": "https://arxiv.org/abs/2611.27900",
+  "tags": [
+   "Other"
+  ],
+  "added": "2026-11-23"
  }
 }
