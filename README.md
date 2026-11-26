@@ -2,51 +2,51 @@
 
 Automated daily digest of new arXiv papers on **AI for medicine**: medical image segmentation, radiology, digital pathology, clinical LLMs and fairness. Updated every day by GitHub Actions.
 
-![papers](https://img.shields.io/badge/papers_tracked-378-blue) ![updated](https://img.shields.io/badge/updated-2026--11--25-green)
+![papers](https://img.shields.io/badge/papers_tracked-424-blue) ![updated](https://img.shields.io/badge/updated-2026--11--26-green)
 
 ## Last 30 days by topic
 
 | Topic | Papers |
 |---|---|
-| Segmentation | 63 |
-| Radiology (CT / MRI / X-ray) | 108 |
-| Digital pathology | 30 |
-| Clinical LLMs & NLP | 102 |
-| Foundation & vision-language models | 79 |
-| Fairness, bias & robustness | 60 |
-| Other | 100 |
+| Segmentation | 68 |
+| Radiology (CT / MRI / X-ray) | 126 |
+| Digital pathology | 32 |
+| Clinical LLMs & NLP | 118 |
+| Foundation & vision-language models | 86 |
+| Fairness, bias & robustness | 67 |
+| Other | 109 |
 
-## Latest papers (2026-11-25)
+## Latest papers (2026-11-26)
 
 | Paper | Topics |
 |---|---|
-| [BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles](https://arxiv.org/abs/2611.33151)<br><sub>Yuwei Yang, Xiaoxiao Sun, Alejandro Lozano et al.</sub> | Foundation & vision-language models |
-| [The Radar-based Activities of Daily Living (R-ADL) Dataset](https://arxiv.org/abs/2611.33088)<br><sub>Dominique Regli, Brian C. Williams</sub> | Other |
-| [On the Creation of Object-Centric Event Logs from Patient Journeys](https://arxiv.org/abs/2611.33074)<br><sub>Saimir Bala, Neven Borak, Maximilian König et al.</sub> | Other |
-| [SUPRA: Synthesizing Amyloid PET from MRI and Plasma Biomarkers with an Explicit Regional SUVR Prior](https://arxiv.org/abs/2611.33061)<br><sub>Hanwen Li, Fadi Deek, Zhi Wei et al.</sub> | Segmentation, Radiology (CT / MRI / X-ray) |
-| [Can LLM Judges Catch Unsafe Clinical Actions? A Fault-Injection Study](https://arxiv.org/abs/2611.33012)<br><sub>Neda Ghafouri</sub> | Clinical LLMs & NLP |
-| [Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration](https://arxiv.org/abs/2611.32993)<br><sub>Juntao Jiang, Wenqi Zhong, Guangyu Guo et al.</sub> | Radiology (CT / MRI / X-ray), Foundation & vision-language models, Fairness, bias & robustness |
-| [FedTumor-IoMT: Federated Learning-Aided Brain Tumor Diagnosis on Resource-Constrained Edge IoMT Devices](https://arxiv.org/abs/2611.32952)<br><sub>Pranshu Jena, Prajnyajit Mohanty, Umesh C. Pati</sub> | Segmentation, Radiology (CT / MRI / X-ray) |
-| [Online V-Learning with Adaptive Longitudinal Data](https://arxiv.org/abs/2611.32947)<br><sub>Aniruddhan Ganesaraman, Michael R. Kosorok</sub> | Other |
-| [Quantum kernels on breast data: concentration, surrogates, and two ways an advantage gets manufactured](https://arxiv.org/abs/2611.32942)<br><sub>Rana Saad, Achraf Toufah, Moulay Youssef El Hafidi</sub> | Other |
-| [ProX-MAD: Aggregating Spatial Context into Representative Proxies for Few-shot Medical Anomaly Detection](https://arxiv.org/abs/2611.32941)<br><sub>Seunghyun Oh, Seongsu Lee, Seunghye Chae et al.</sub> | Other |
-| [IMPACT-Seg: Consistent Anatomical Segmentation and Representation Learning Across CT, CBCT, and MRI](https://arxiv.org/abs/2611.32903)<br><sub>Cédric Hémon, Valentin Boussot, Matthew McCormick et al.</sub> | Segmentation, Radiology (CT / MRI / X-ray), Foundation & vision-language models |
-| [Reliable and grounded reporting of any computed tomography scan with FORA](https://arxiv.org/abs/2611.32823)<br><sub>Sezgin Er, Utku Turkbey, Alperen Gur et al.</sub> | Radiology (CT / MRI / X-ray), Clinical LLMs & NLP |
-| [ASCENT: A Benchmark for Evaluating and Advancing Stepwise Diagnostic Reasoning in Large Language Models on Common Clinical Scenarios](https://arxiv.org/abs/2611.32734)<br><sub>Yera Choi, Yeong Hwa Kim, Jaedeok Lee et al.</sub> | Clinical LLMs & NLP, Fairness, bias & robustness |
-| [Contrastive Proxy Forests: Completeness-Preserving Proxy Learning from Multimodal Records](https://arxiv.org/abs/2611.32708)<br><sub>Kyoungeui Hong, Zijun Gao, Ruishan Liu</sub> | Clinical LLMs & NLP, Foundation & vision-language models |
-| [GeoSurge: Geometry-Grounded Multimodal Reasoning for Auditable Liver Resection Planning](https://arxiv.org/abs/2611.32657)<br><sub>Wenjie Deng, Zijian Tu, Xueyin Zhou et al.</sub> | Segmentation, Foundation & vision-language models |
-| [Generating Schema-Aligned Synthetic Dialogues and Measuring Their Diversity](https://arxiv.org/abs/2611.32631)<br><sub>Konrad Stolte, Toni Fetzer</sub> | Clinical LLMs & NLP |
-| [Contact Geometry for Generative Models: An Unbalanced Optimal Transport Formulation](https://arxiv.org/abs/2611.32547)<br><sub>Andrea Testa, Søren Hauberg, Andras Gabor Kupcsik et al.</sub> | Fairness, bias & robustness |
-| [Adaptive and Detection-Aware Super-Resolution for Small Object Detection](https://arxiv.org/abs/2611.32394)<br><sub>Cezica-Elena Luncanu, Stelian Spînu</sub> | Other |
-| [Latent Class Mixed Model Variational Autoencoders for Scalable Phenotyping of Health Trajectories](https://arxiv.org/abs/2611.32391)<br><sub>Philomène Letzelter, Violaine Courrier, Sandrine Katsahian et al.</sub> | Other |
-| [Can AI Design a Better nnU-Net? A Hypothesis-Driven Architecture Discovery Loop from Failures to Design Rules](https://arxiv.org/abs/2611.32384)<br><sub>Songtao Jiang, Yuan Wang, Fucheng Niu et al.</sub> | Segmentation, Radiology (CT / MRI / X-ray), Clinical LLMs & NLP |
-| [A Description-Derived Drug-Drug Interaction Benchmark Reveals Split-Dependent Molecular Representation Rankings](https://arxiv.org/abs/2611.32371)<br><sub>Manel Gil-Sorribes, Isaac Filella-Merce, Alexis Molina</sub> | Other |
-| [DiCT: Teaching X-ray Vision-Language Models to Reason via Imagining CT](https://arxiv.org/abs/2611.32344)<br><sub>Zhenghao Lu, Xiaotian Zhang, Songtao Jiang et al.</sub> | Radiology (CT / MRI / X-ray), Clinical LLMs & NLP, Foundation & vision-language models |
-| [Refining and Aligning Clinical Reasoning with Health Guidelines via Formal Constraints](https://arxiv.org/abs/2611.32247)<br><sub>Xiaoyang Fan, Yufan Cai, Zhe Hou et al.</sub> | Fairness, bias & robustness |
-| [FlashSegmentator: High-Throughput TotalSegmentator Inference without Loss of Accuracy](https://arxiv.org/abs/2611.32208)<br><sub>Yosuke Yamagishi, Tomohiro Kikuchi, Shouhei Hanaoka et al.</sub> | Segmentation, Radiology (CT / MRI / X-ray) |
-| [CSC-Mamba: Bridging multimodal convolutional sparse coding and state space models for multi-contrast MRI super-resolution](https://arxiv.org/abs/2611.32144)<br><sub>Iman Marivani, David Van Hamme, Jan Aelterman et al.</sub> | Radiology (CT / MRI / X-ray), Foundation & vision-language models |
+| [Comparative Study of Deep Learning Architectures for Brain Tumour Classification](https://arxiv.org/abs/2611.34781)<br><sub>Prisha Gupta, Pradeep Kumar Gupta</sub> | Radiology (CT / MRI / X-ray) |
+| [Privileged On-Policy Distillation for Calibrated Alzheimer's Diagnosis With Missing Modalities](https://arxiv.org/abs/2611.34721)<br><sub>Vo Minh Khoi Nguyen, Dat Tien Chung, Quang Minh Khoa Le et al.</sub> | Other |
+| [Beyond Pose Control: Anatomically Consistent Ultrasound Video Generation](https://arxiv.org/abs/2611.34622)<br><sub>Yue Zhou, Fangxu Han, Tony Danjun Wang et al.</sub> | Radiology (CT / MRI / X-ray) |
+| [Automated Batch-Variable Selection for ComBat-Based Radiomic Harmonization](https://arxiv.org/abs/2611.34618)<br><sub>Jose Lozano-Montoya, Gemma Urbanos, Carmen Prieto-de-la-Lastra et al.</sub> | Radiology (CT / MRI / X-ray) |
+| [Sage-Med: Scaling Medical Multimodal Intelligence](https://arxiv.org/abs/2611.34575)<br><sub>Sage-Med Team, :, Ming Hu et al.</sub> | Clinical LLMs & NLP, Foundation & vision-language models |
+| [EPPC-CARE: Staged Hierarchical Annotation of Communication Behaviors in Secure Patient-Provider Messages](https://arxiv.org/abs/2611.34539)<br><sub>Samah Fodeh, Sreeraj Ramachandran, Ganesh Puthiaraju et al.</sub> | Clinical LLMs & NLP |
+| [Auditing Identity and Timing Signals in Operational Logs](https://arxiv.org/abs/2611.34493)<br><sub>Andrew Hendel</sub> | Other |
+| [Feed-Forward Adaptive Gaussian Splatting for Interactive Medical Volume Rendering](https://arxiv.org/abs/2611.34478)<br><sub>Zhongpai Gao, Benjamin Planche, Meng Zheng et al.</sub> | Radiology (CT / MRI / X-ray) |
+| [Evidence-Aligned Benchmarking and Learning for Medical Video Language Models](https://arxiv.org/abs/2611.34465)<br><sub>Zhongpai Gao, Anwesa Choudhuri, Meng Zheng et al.</sub> | Clinical LLMs & NLP, Foundation & vision-language models |
+| [Mitigating Hallucinations in Medical Question Answering on ESC Cardiology Guidelines: Evaluation and Retrieval Optimization](https://arxiv.org/abs/2611.34427)<br><sub>Ilkin Masimov, Rufana Baghirli, Muhammad Rashid</sub> | Clinical LLMs & NLP |
+| [Interpretable identification of constitutive parameter field for three-dimensional heterogeneous and graded hyperelastic materials from full-field displacements](https://arxiv.org/abs/2611.34310)<br><sub>Kanhaiya Lal Chaurasiya, Vaskar Halder, Prajyot Patil et al.</sub> | Other |
+| [Train-Only-Constrained LM for Synthetic Clinical Trajectories: Leak-Safe Calibration and Auditable Dynamics](https://arxiv.org/abs/2611.34258)<br><sub>Yaser Kord, Moritz Hess</sub> | Clinical LLMs & NLP |
+| [MedSkill-E$^{2}$: Evaluating and Evolving Skills for Medical Agents](https://arxiv.org/abs/2611.34250)<br><sub>Jingjing Hua, Shaocong Wei, Jianghan Shen et al.</sub> | Clinical LLMs & NLP |
+| [Did the Model Forecast It, or Already Know It? Evaluating Large Language Models for Novel Drug-Target Prioritisation with a Temporal Knowledge-Graph Oracle](https://arxiv.org/abs/2611.34247)<br><sub>Pui Chung Siu, Yuan Liang, Claudia Cabrera et al.</sub> | Clinical LLMs & NLP |
+| [Weakly Conditioned Diffusion Model Augmentation for Prostate Segmentation](https://arxiv.org/abs/2611.34230)<br><sub>Chibike Ugbam, Muhammad Bilal, Jia Wu et al.</sub> | Segmentation, Radiology (CT / MRI / X-ray) |
+| [Multi-view fnirs identifies neurophysiological subtypes in post-stroke aphasia](https://arxiv.org/abs/2611.34169)<br><sub>Zijian Kang, Bingbing Lin, Jinglei Ni et al.</sub> | Other |
+| [Cell-Type-Specific Expression Is Hard to Predict from Bulk, but It Is Still Useful](https://arxiv.org/abs/2611.34166)<br><sub>Gadi Naveh, Amit Miller, Gal Keinan</sub> | Radiology (CT / MRI / X-ray) |
+| [JHealthBench-L: Clinician-Reviewed Localization of HealthBench for Rubric-Based Medical LLM Evaluation in Japan](https://arxiv.org/abs/2611.34024)<br><sub>Shohei Hisada, Keisuke Orimo, Kenji Igarashi et al.</sub> | Clinical LLMs & NLP |
+| [DosePET: An Open-Source Dataset with 2100 Radiation Dose Maps for PET/CT](https://arxiv.org/abs/2611.34008)<br><sub>Eleftherios Tzanis, Antonios Tzortzakakis, Michail E. Klontzas</sub> | Radiology (CT / MRI / X-ray) |
+| [Where Does Free-Text 3D Grounding Fail? An Error Analysis of Report-Sentence Segmentation in Chest CT](https://arxiv.org/abs/2611.33958)<br><sub>Abdullah Arif Sheikh, Kamalaker Dadi, Raju S. Bapi</sub> | Segmentation, Radiology (CT / MRI / X-ray) |
+| [TAT-Det: A Dataset for Testicular Appendage Torsion Detection and Segmentation in Ultrasound Images](https://arxiv.org/abs/2611.33940)<br><sub>Ying Jiang, Juntao Jiang, Linxuan Fan et al.</sub> | Segmentation, Radiology (CT / MRI / X-ray) |
+| [EGSE: Evidence-Grounded Skill Evolution for Medical Reasoning Agents](https://arxiv.org/abs/2611.33909)<br><sub>Mingyuan Li, Tong Jia, Ziyuan Yang et al.</sub> | Radiology (CT / MRI / X-ray) |
+| [EATS: Scaling Tool-Use Experience for Medical Reasoning Agents](https://arxiv.org/abs/2611.33897)<br><sub>Mingyuan Li, Tong Jia, Haoran Wang et al.</sub> | Clinical LLMs & NLP, Foundation & vision-language models, Fairness, bias & robustness |
+| [Structured Noise Diffusion for Echocardiography Haze Removal](https://arxiv.org/abs/2611.33860)<br><sub>Zike Luo, Hao Li, Mengxiao Wang et al.</sub> | Radiology (CT / MRI / X-ray), Fairness, bias & robustness |
+| [Continuous Foundation-Guided Pseudo-Label Weighting for Breast Ultrasound Domain Adaptation](https://arxiv.org/abs/2611.33843)<br><sub>Xinyu Fan, Xinyi Li</sub> | Segmentation, Radiology (CT / MRI / X-ray) |
 
-➡️ [All 49 papers of the day](digests/2026/11/2026-11-25.md)
+➡️ [All 46 papers of the day](digests/2026/11/2026-11-26.md)
 
 ## Archive
 
